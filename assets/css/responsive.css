@@ -1,0 +1,88 @@
+@media (min-width: 1024px) {
+    /* Kiểu dáng cho máy tính để bàn */
+    
+  }
+  
+  @media (max-width:1023px) {
+    /* Kiểu dáng cho máy tính bảng */
+    #nav .subnav a{
+      padding: 5px 12px;
+    }
+    .View-btn{
+      padding: 15px 16px;
+    }
+    .contact-form .form-control{
+      padding:15px;
+    }
+    .contact-infor{
+      line-height: 2;
+    }
+    .contact-form .btn-submit{
+      padding: 12px 15 px;
+    }
+  
+    #footer .social{
+      font-size: 48px;
+    }
+    #footer .social a{
+      margin-left: 8px;
+    }
+  }
+  @media (max-width: 740px) {
+  
+    /* Kiểu dáng cho thiết bị di động */
+    .s-col-full{
+      width: 100% !important;
+    }
+    .full-width{
+      width: 100% !important;
+      text-align:center;
+    }
+    .s-mt-32{
+      margin-top: 32px;
+    }
+    .mt-8{
+      margin-top: 8px !important;
+    }
+    #nav{
+      display: block;
+    }
+    #nav li a{
+      padding: 1px 24px;
+    }
+   #nav > li{
+    display: block;
+   }
+   #nav > li:first-child{
+    display: inline-block;
+   }
+   #nav .subnav{
+    position: initial;
+    background-color: #333;
+   }
+   #nav .subnav a{
+    color: #fff;
+    padding: 5px 41px;
+   }
+   #header{
+    overflow: hidden;
+   }
+   #header .search-button{
+    display: none;
+   }
+   #header .menu-mobile{
+    display: block;
+   }
+   #content .mem{
+    margin-top: 30px;
+    width: 100%;
+   }
+   #content .member-img{
+    width: 60%;
+   }
+   .contact-form{
+    margin-top: 32px;
+   }
+  
+  }
+   

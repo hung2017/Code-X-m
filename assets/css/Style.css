@@ -1,0 +1,380 @@
+/* reset css */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+/* class dung chung */
+.clear{
+    clear: both;
+}
+.text-white{
+    color: #fff !important ;
+}
+.mt-8{
+    margin-top: 8px !important;
+}
+.mt-32{
+    margin-top: 32;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+/* Tạo 1 elemen giả để cho nó ôm hết thẻ*/
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-half{
+    width: 50%;
+}
+.col-full{
+    width: 100%;
+}
+
+#main{
+}
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 46px;
+    background-color: black;
+    z-index: 1; /*để cái header nổi lên trên*/
+}
+#nav{
+    display: inline-block; 
+}
+#nav .subnav{
+    list-style-type: none; /*Tắt dấu liệt kê*/
+}
+#nav > li{
+    display: inline-block;
+    text-transform:capitalize; /*set kiểu chữ viết hoa*/
+}
+#nav li{
+    position: relative;
+}
+
+#nav > li > a{
+    color: #fff;
+    text-transform: uppercase; /*set kiểu chữ viết in*/
+}
+
+#nav li a{
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 20px ; 
+    display: block;
+}
+
+#nav li:hover .subnav{
+    display: block;
+    transition: 0.5s; 
+}
+
+#nav > li:hover > a,
+#nav .subnav li:hover a{
+    color: black;
+    background-color:blueviolet;
+    font-weight: bold;
+    transition:  0.5s;
+    
+}
+
+
+#nav .subnav{
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /*đổ bóng*/
+}
+#nav .subnav a{
+    color: black;
+    padding: 0 25px;
+    line-height: 38px;
+}
+
+#header .menu-mobile{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+#header .menu-mobile,
+#header .search-button{
+    float: right;
+    padding: 0 21px;
+}
+
+#header .menu-mobile,
+#header .search-button:hover{
+    background-color: blueviolet;
+    cursor: pointer; /*trỏ chuôt*/
+    
+}
+
+#slider{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 25%;
+    background-image: url('/assets/img/pic1.png');
+}
+
+#slider .text-content{
+    position: absolute;
+    color: #4e06f5;
+    bottom: 20px;
+    transform: translateX(-50%);
+    left: 50%;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:900;
+    
+}
+
+#slider .text-heading{
+    font-size: 50px;
+    text-shadow: 3px 3px 1px #000;
+}
+
+#slider .text-description{
+    font-size: 20px;
+    margin-top: 10px;
+    text-shadow: 2px 1px 1px #000;
+}
+
+#content{
+
+}
+
+#content .content-section{
+    width: 1000px;
+    max-width: 100%;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto; 
+    padding-left:16px ; /*từ đây để respon*/
+    padding-right: 16px ;
+}
+
+#content .section-heading{
+    color: #aa03f8;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600; /*Độ dày chữ*/
+    letter-spacing: 4px; /*Giãn chữ*/
+    text-shadow: 3px 2px 4px #000; /*Đổ bóng*/
+}
+
+#content .section-subheading{
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
+    opacity:0.6; /*Độ trong suốt*/
+    margin-top: 25px;
+}
+
+#content .about-text{
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: justify; /*Căn lề*/
+    line-height: 1.5; /*Khoảng cách dòng*/
+}
+
+#content .member-list{
+   margin-top: 50px;
+}
+
+#content .member-item{
+    float: left;
+    width: calc(100% / 3);
+    text-align: center;
+}
+
+#content .member-name{
+    font-size: 15px;
+}
+
+#content .member-img{
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px; /*bo viền*/
+}
+
+.project-section{
+    background-color: rgb(130, 0, 206);
+}
+.timeline{
+    background-color: #fff;
+    margin-top: 40px;
+    list-style-type: none;
+}
+.timeline li{
+    color: #686262;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ccc;
+}
+.timeline .ttql{
+    background-color: red;
+    color: #fff;
+    padding: 5px 5px;
+    margin-left: 50px;
+}
+.timeline .ttcv{
+    background-color: red;
+    color: #fff;
+    padding: 5px 5px;
+    margin-left: 40px;
+}
+.timeline .ttpm{
+    background-color: red;
+    color: #fff;
+    padding: 5px 5px;
+    margin-left: 18px;
+    /* float: right;
+    width: 39px;
+    height: 36px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%; /*Bo hình tròn*/
+    /*text-align: center; /*Căn giữa trái phải*/
+    /*line-height: 34px; /*căn giữa trên dưới*/
+    /*margin-top: -8px;*/
+}
+
+.project-list{
+   margin-top: 32px;
+   margin-bottom: 48px;
+}
+.project-item{
+    width: calc(100% /3);
+}
+.project-img{
+    width: 100%;
+    display: block;
+  
+}
+.project-img:hover{
+    opacity: 0.6;
+    transition: 0.5s; 
+}
+.project-conten{
+    padding: 16px;
+    font-size: 15px;
+    background-color: #fff;
+}
+.project-heading{
+    font-size: 15px;
+    font-weight: 600;
+}
+.project-time{
+    margin-top: 15px;
+    color: #757575;
+}
+.project-desc{
+    margin-top: 15px;
+    line-height: 1.5;
+}
+.View-btn{
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border-radius: 10px;
+
+}
+.View-btn:hover{
+    color: #61169e;
+    background-color: #ccc;
+    font-weight: bolder;
+    transition: 0.5s; 
+}
+
+/* @keyframes modalfadein {
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0);
+    }
+} */
+/* Contact form */
+.contact-content{
+    margin-top: 48px;
+}
+.contact-infor{
+    font-size: 18px;
+    line-height: 1.6;
+}
+.contact-infor i[class*="fas"] {
+    display: inline-block;
+    width: 30px;
+}
+.contact-form{
+    font-size: 15px;
+}
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.contact-form .btn-submit{
+    margin-top: 16px !important;
+    background-color: #000000;
+    color: #fff;
+    border: 2px solid #000;
+    padding: 10px 16px;
+    border-radius: 5px;
+    
+}
+.contact-form .btn-submit:hover{
+    background-color: #61169e;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s; 
+}
+.pic-section img{
+    width: 100%;
+}
+/*chân trang*/
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+
+}
+#footer .social{
+    font-size: 24px;
+}
+#footer .social a{
+    color:rgba(0, 0, 0, 0.5);
+    margin-left: 5px;
+}
+#footer p{
+    margin-top: 10px;
+}
+  
